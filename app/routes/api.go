@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"github.com/heroku/go-getting-started/app/auth"
 	"github.com/heroku/go-getting-started/app/controllers"
 	"github.com/heroku/go-getting-started/app/helpers"
 	"github.com/labstack/echo/v4"
@@ -15,7 +16,7 @@ import (
 // }
 func DefineAPIRoutes(e *echo.Echo) {
 	controllers := []helpers.Controller{
-		// auth.AuthController{},
+		auth.AuthController{},
 		// controllers.ProductsController{},
 		controllers.PublicController{},
 	}
