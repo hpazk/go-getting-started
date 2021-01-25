@@ -1,20 +1,13 @@
 package main
 
 import (
-	"log"
 	"net/http"
-	"os"
 
 	_ "github.com/heroku/x/hmetrics/onload"
 	"github.com/labstack/echo/v4"
 )
 
 func main() {
-	port := os.Getenv("PORT")
-
-	if port == "" {
-		log.Fatal("$PORT must be set")
-	}
 
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
