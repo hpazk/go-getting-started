@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -10,6 +11,7 @@ import (
 	_ "github.com/heroku/x/hmetrics/onload"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"github.com/triaton/go-getting-started/database"
 
 	"github.com/joho/godotenv"
 )
@@ -31,13 +33,13 @@ func main() {
 		AllowOrigins: []string{"*"},
 		AllowMethods: []string{echo.GET, echo.HEAD, echo.PUT, echo.PATCH, echo.POST, echo.DELETE},
 	}))
-	// db := database.GetInstance()
-	// err = database.GetMigrations(db)
-	// if err != nil {
-	// 	fmt.Println("migrations failed.", err)
-	// } else {
-	// 	fmt.Println("Migrations did run successfully")
-	// }
+	db := database.GetInstance()
+	err = database.GetMigrations(db)
+	if err != nil {
+		fmt.Println("migrations failed.", err)
+	} else {
+		fmt.Println("Migrations did run successfully")
+	}
 
 	// m := database.GetMigrations(db)
 	// err = m.Migrate()
