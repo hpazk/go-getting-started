@@ -1,20 +1,19 @@
 package main
 
 import (
-	"log"
 	"net/http"
-	"os"
 
 	"github.com/gin-gonic/gin"
+	"github.com/heroku/go-getting-started/app/routes"
 	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 func main() {
-	port := os.Getenv("PORT")
+	// port := os.Getenv("PORT")
 
-	if port == "" {
-		log.Fatal("$PORT must be set")
-	}
+	// if port == "" {
+	// 	log.Fatal("$PORT must be set")
+	// }
 
 	router := gin.New()
 	router.Use(gin.Logger())
@@ -25,5 +24,6 @@ func main() {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
 
-	router.Run(":" + port)
+	routes.DefineAPIRoutes()
+	// router.Run(":" + port)
 }
