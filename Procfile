@@ -1,1 +1,1 @@
-web: bin/go-echo-rest-api
+web: bin/go-getting-started
