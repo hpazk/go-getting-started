@@ -58,5 +58,6 @@ func main() {
 
 		return
 	})
-	server.Logger.Fatal(server.Start(":" + os.Getenv("APP_PORT")))
+	server.Logger.Fatal(server.Start(":" + os.Getenv("PORT")))
+	// e.Logger.Fatal(e.Start(":" + os.Getenv("PORT")))
 }
