@@ -72,6 +72,8 @@ github.com/heroku/x v0.0.0-20171004170240-705849e307dd h1:zn29UrzyUeQgqxBGXIwQqQ
 github.com/heroku/x v0.0.0-20171004170240-705849e307dd/go.mod h1:opmAyjmIGn9/Y+9Nia6eIaktIXIoMhhFXEFbHLMsX3Y=
 github.com/hpazk/go-echo-rest-api v0.0.0-20210125102539-10d326b14a49 h1:46r9EhzvBx8Shf/ly4rL7bjkog3G03VTaVw+x+fVCWU=
 github.com/hpazk/go-echo-rest-api v0.0.0-20210125102539-10d326b14a49/go.mod h1:Obaxs+gYPRcViB9kw1XyG8scoAHMKaSYiX+w3DAaXLc=
+github.com/hpazk/go-echo-rest-api v0.0.0-20210126013809-4ebfa6c169ea h1:Q3h8IqEz2jmxOatYSmn5NAfeFJ1YXhj9P34ni2bQ0PA=
+github.com/hpazk/go-echo-rest-api v0.0.0-20210126013809-4ebfa6c169ea/go.mod h1:Obaxs+gYPRcViB9kw1XyG8scoAHMKaSYiX+w3DAaXLc=
 github.com/hpazk/go-getting-started v0.0.0-20210125085214-77f60e7cc52c h1:GGj0l/qHMCX5uv0R7ayDlh1lBGsPFbdl/Kjshp3m4Xw=
 github.com/jinzhu/gorm v1.9.2/go.mod h1:Vla75njaFJ8clLU1W44h34PjIkijhjHIYnZxMqCdxqo=
 github.com/jinzhu/gorm v1.9.14/go.mod h1:G3LB3wezTOWM2ITLzPxEXgSkOXAntiLHS7UdBefADcs=
