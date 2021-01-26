@@ -7,10 +7,15 @@ import (
 
 type User struct {
 	models.Base
-	Email    string `gorm:"type:varchar(255);unique_index"`
-	Password string
-	Name     string
-	Role     helpers.UserRole
+	Email       string `gorm:"type:varchar(255);unique_index"`
+	Password    string
+	Role        helpers.UserRole
+	Name        string
+	FirstName   string
+	LastName    string
+	PhoneNumber string
+	City        string
+	Address     string
 }
 
 func (user User) String() string {

@@ -14,9 +14,14 @@ type (
 	}
 
 	RegisterRequest struct {
-		Email    string `json:"email" form:"email" query:"email" validate:"email,required"`
-		Name     string `json:"name" validate:"required"`
-		Password string `json:"password" validate:"required"`
+		Email       string `json:"email" form:"email" query:"email" validate:"email,required"`
+		Password    string `json:"password" validate:"required"`
+		Name        string `json:"name" validate:"required"`
+		FirstName   string `json:"first_name" validate:"required"`
+		LastName    string `json:"last_name" validate:"required"`
+		PhoneNumber string `json:"phone_number" validate:"required"`
+		City        string `json:"city" validate:"required"`
+		Address     string `json:"address" validate:"required"`
 	}
 
 	LoginRequest struct {
@@ -55,7 +60,11 @@ func (controller AuthController) Register(c echo.Context) error {
 	}
 
 	// need Response Formatter
-	user := services.GetUsersService().AddUser(params.Name, params.Email, params.Password)
+	user := services.GetUsersService().AddUser(
+		params.Email,
+		params.Password,
+		params.Name,
+	)
 	response := helpers.ResponseFormatter{
 		Code:    201,
 		Status:  "success",

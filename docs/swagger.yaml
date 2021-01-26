@@ -1,0 +1,168 @@
+---
+swagger: "2.0"
+info:
+  description: This is a simple API
+  version: 1.0.0
+  title: Authtentication API
+  contact:
+    email: hpazk.zkh@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: virtserver.swaggerhub.com
+basePath: /hpazk/jerseyliciouz/1.0.0
+tags:
+  - name: developers
+    description: Operations available to regular developers
+schemes:
+  - https
+paths:
+  /register:
+    post:
+      tags:
+        - developers
+      summary: Registration
+      description: |
+        By passing in the appropriate options, you can register an account
+      operationId: userRegistration
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: users
+          description: user registration.
+          required: false
+          schema:
+            $ref: "#/definitions/users"
+      responses:
+        "200":
+          description: user successfully registered
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/ResponseFormatter"
+        "400":
+          description: user registration
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/inline_response_400"
+  /login:
+    post:
+      tags:
+        - developers
+      summary: Login
+      description: |
+        By passing in the appropriate options, you can login to apps
+      operationId: userLogin
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: users
+          description: user login.
+          required: false
+          schema:
+            $ref: "#/definitions/users_1"
+      responses:
+        "200":
+          description: user authenticatication
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/inline_response_200"
+definitions:
+  ResponseFormatter:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 200
+      status:
+        type: string
+        example: success
+      message:
+        type: string
+        example: user successfully registered
+      data:
+        $ref: "#/definitions/User"
+  User:
+    properties:
+      id:
+        type: string
+        format: uuid
+        example: d290f1ee-6c54-4b01-90e6-d701748f0851
+      name:
+        type: string
+        example: M Iqbal Ali
+      first_name:
+        type: string
+        example: Iqbal
+      last_name:
+        type: string
+        example: Ali
+      phonenumber:
+        type: string
+        example: 8.799099099E10
+      city:
+        type: string
+        example: Kab. Sumedang
+      address:
+        type: string
+        example: Jalan Tarumanegara No. 01
+  users:
+    type: object
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+      name:
+        type: string
+      first_name:
+        type: string
+      last_name:
+        type: string
+      phone_number:
+        type: string
+      address:
+        type: string
+      city:
+        type: string
+  inline_response_400:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 400
+      status:
+        type: string
+        example: error
+      message:
+        type: string
+        example: cannot process your request
+  users_1:
+    type: object
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+  inline_response_200:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 200
+      status:
+        type: string
+        example: success
+      message:
+        type: string
+        example: user authenticated

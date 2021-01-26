@@ -1,0 +1,253 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Authtentication API",
+        "description": "This is a simple API",
+        "contact": {
+            "email": "hpazk.zkh@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0-oas3"
+    },
+    "servers": [{
+        "url": "https://virtserver.swaggerhub.com/hpazk/jerseyliciouz/1.0.0"
+    }],
+    "tags": [{
+        "name": "developers",
+        "description": "Operations available to regular developers"
+    }],
+    "paths": {
+        "/register": {
+            "post": {
+                "tags": [
+                    "developers"
+                ],
+                "summary": "Registration",
+                "description": "By passing in the appropriate options, you can register an account\n",
+                "operationId": "userRegistration",
+                "requestBody": {
+                    "description": "user registration.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/body"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "user successfully registered",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ResponseFormatter"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "user registration",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/inline_response_400"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "tags": [
+                    "developers"
+                ],
+                "summary": "Login",
+                "description": "By passing in the appropriate options, you can login to apps\n",
+                "operationId": "userLogin",
+                "requestBody": {
+                    "description": "user login.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/body_1"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "user authenticatication",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/inline_response_200"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ResponseFormatter": {
+                "required": [
+                    "address",
+                    "city",
+                    "email",
+                    "first_name",
+                    "last_name",
+                    "name",
+                    "phone_number"
+                ],
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "example": 200
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "user successfully registered"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/User"
+                    }
+                }
+            },
+            "User": {
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "d290f1ee-6c54-4b01-90e6-d701748f0851"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "M Iqbal Ali"
+                    },
+                    "first_name": {
+                        "type": "string",
+                        "example": "Iqbal"
+                    },
+                    "last_name": {
+                        "type": "string",
+                        "example": "Ali"
+                    },
+                    "phonenumber": {
+                        "type": "string",
+                        "example": "8.799099099E+10"
+                    },
+                    "city": {
+                        "type": "string",
+                        "example": "Kab. Sumedang"
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": "Jalan Tarumanegara No. 01"
+                    }
+                }
+            },
+            "body": {
+                "required": [
+                    "email",
+                    "password"
+                ],
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "first_name": {
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "type": "string"
+                    },
+                    "address": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    }
+                }
+            },
+            "inline_response_400": {
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "example": 400
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "error"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "cannot process your request"
+                    }
+                }
+            },
+            "body_1": {
+                "required": [
+                    "email",
+                    "password"
+                ],
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                }
+            },
+            "inline_response_200": {
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "example": 200
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "user authenticated"
+                    }
+                }
+            }
+        }
+    }
+}

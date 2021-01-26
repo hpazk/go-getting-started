@@ -32,7 +32,7 @@ func SetUsersService(service UsersService) UsersService {
 
 type UsersService interface {
 	FindUserByEmail(email string) *UserModel.User
-	AddUser(name string, email string, password string) *UserModel.User
+	AddUser(email string, password string, name string) *UserModel.User
 }
 
 func (u *usersService) FindUserByEmail(email string) *UserModel.User {
@@ -45,12 +45,12 @@ func (u *usersService) FindUserByEmail(email string) *UserModel.User {
 	return nil
 }
 
-func (u *usersService) AddUser(name string, email string, password string) *UserModel.User {
+func (u *usersService) AddUser(email string, password string, name string) *UserModel.User {
 	user := users.User{
-		Name:     name,
 		Role:     helpers.Customer,
 		Email:    email,
 		Password: password,
+		Name:     name,
 	}
 	db := database.GetInstance()
 	db.Create(&user)

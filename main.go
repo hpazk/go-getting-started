@@ -14,6 +14,10 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 
 	"github.com/joho/godotenv"
+
+	echoSwagger "github.com/swaggo/echo-swagger"
+
+	_ "github.com/heroku/go-getting-started/docs"
 )
 
 func main() {
@@ -60,6 +64,7 @@ func main() {
 
 		return
 	})
+	server.GET("/*", echoSwagger.WrapHandler)
 	server.Logger.Fatal(server.Start(":" + os.Getenv("PORT")))
 	// e.Logger.Fatal(e.Start(":" + os.Getenv("PORT")))
 }
