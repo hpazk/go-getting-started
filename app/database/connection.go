@@ -5,7 +5,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/hpazk/go-getting-started/app/config"
+	"github.com/hpazk/go-echo-rest-api/app/config"
 	"github.com/jinzhu/gorm"
 
 	_ "github.com/jinzhu/gorm/dialects/postgres"

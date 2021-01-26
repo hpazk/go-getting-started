@@ -3,7 +3,7 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/heroku/go-getting-started/app/helpers"
+	"github.com/hpazk/go-echo-rest-api/app/helpers"
 	"github.com/labstack/echo/v4"
 )
 

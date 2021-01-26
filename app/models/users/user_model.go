@@ -1,8 +1,8 @@
 package users
 
 import (
-	"github.com/hpazk/go-getting-started/app/helpers"
-	"github.com/hpazk/go-getting-started/app/models"
+	"github.com/hpazk/go-echo-rest-api/app/helpers"
+	"github.com/hpazk/go-echo-rest-api/app/models"
 )
 
 type User struct {

@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/hpazk/go-getting-started/app/config"
-	"github.com/hpazk/go-getting-started/app/middlewares"
-	UserModel "github.com/hpazk/go-getting-started/app/models/users"
+	"github.com/hpazk/go-echo-rest-api/app/config"
+	"github.com/hpazk/go-echo-rest-api/app/middlewares"
+	UserModel "github.com/hpazk/go-echo-rest-api/app/models/users"
 )
 
 type authService struct{}

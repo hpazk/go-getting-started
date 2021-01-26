@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/hpazk/go-getting-started/app/helpers"
+	"github.com/hpazk/go-echo-rest-api/app/helpers"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	uuid "github.com/satori/go.uuid"

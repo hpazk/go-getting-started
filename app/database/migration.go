@@ -1,15 +1,15 @@
 package database
 
 import (
-	// CategoryModel "github.com/hpazk/go-getting-started/app/models/products"
-	// ProductModel "github.com/hpazk/go-getting-started/app/models/products"
-	UserModel "github.com/hpazk/go-getting-started/app/models/users"
+	CategoryModel "github.com/hpazk/go-echo-rest-api/app/models/products"
+	ProductModel "github.com/hpazk/go-echo-rest-api/app/models/products"
+	UserModel "github.com/hpazk/go-echo-rest-api/app/models/users"
 	"github.com/jinzhu/gorm"
 )
 
 func GetMigrations(db *gorm.DB) error {
-	// db.AutoMigrate(&CategoryModel.Category{})
-	// db.AutoMigrate(&ProductModel.Product{})
+	db.AutoMigrate(&CategoryModel.Category{})
+	db.AutoMigrate(&ProductModel.Product{})
 	db.AutoMigrate(&UserModel.User{})
 
 	return nil

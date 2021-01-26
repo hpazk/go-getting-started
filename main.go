@@ -6,12 +6,12 @@ import (
 	"os"
 
 	"github.com/go-playground/validator/v10"
+	"github.com/heroku/go-getting-started/app/database"
 	"github.com/heroku/go-getting-started/app/helpers"
 	"github.com/heroku/go-getting-started/app/routes"
 	_ "github.com/heroku/x/hmetrics/onload"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	"github.com/triaton/go-getting-started/database"
 
 	"github.com/joho/godotenv"
 )

@@ -3,8 +3,8 @@ package auth
 import (
 	"net/http"
 
-	"github.com/hpazk/go-getting-started/app/helpers"
-	"github.com/hpazk/go-getting-started/app/services"
+	"github.com/hpazk/go-echo-rest-api/app/helpers"
+	"github.com/hpazk/go-echo-rest-api/app/services"
 
 	"github.com/labstack/echo/v4"
 )

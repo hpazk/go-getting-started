@@ -1,12 +1,12 @@
-package auth
+package services
 
 import (
 	"sync"
 
+	"github.com/hpazk/go-echo-rest-api/app/database"
+	"github.com/hpazk/go-echo-rest-api/app/helpers"
 	"github.com/hpazk/go-echo-rest-api/app/models/users"
-	"github.com/hpazk/go-getting-started/app/database"
-	"github.com/hpazk/go-getting-started/app/helpers"
-	UserModel "github.com/hpazk/go-getting-started/app/models/users"
+	UserModel "github.com/hpazk/go-echo-rest-api/app/models/users"
 )
 
 type usersService struct{}
