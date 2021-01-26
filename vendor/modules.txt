@@ -7,9 +7,27 @@ github.com/go-playground/locales/currency
 github.com/go-playground/universal-translator
 # github.com/go-playground/validator/v10 v10.4.1
 github.com/go-playground/validator/v10
+# github.com/golangkit/formatime v0.0.0-20191104073810-5264c15ae8ec
+github.com/golangkit/formatime
 # github.com/heroku/x v0.0.0-20171004170240-705849e307dd
 github.com/heroku/x/hmetrics
 github.com/heroku/x/hmetrics/onload
+# github.com/hpazk/go-echo-rest-api v0.0.0-20210125102539-10d326b14a49
+github.com/hpazk/go-echo-rest-api/app/auth
+github.com/hpazk/go-echo-rest-api/app/config
+github.com/hpazk/go-echo-rest-api/app/controllers
+github.com/hpazk/go-echo-rest-api/app/database
+github.com/hpazk/go-echo-rest-api/app/helpers
+github.com/hpazk/go-echo-rest-api/app/middlewares
+github.com/hpazk/go-echo-rest-api/app/models
+github.com/hpazk/go-echo-rest-api/app/models/products
+github.com/hpazk/go-echo-rest-api/app/models/users
+github.com/hpazk/go-echo-rest-api/app/services
+# github.com/jinzhu/gorm v1.9.16
+github.com/jinzhu/gorm
+github.com/jinzhu/gorm/dialects/postgres
+# github.com/jinzhu/inflection v1.0.0
+github.com/jinzhu/inflection
 # github.com/joho/godotenv v1.3.0
 github.com/joho/godotenv
 # github.com/labstack/echo/v4 v4.1.17
@@ -20,19 +38,28 @@ github.com/labstack/gommon/bytes
 github.com/labstack/gommon/color
 github.com/labstack/gommon/log
 github.com/labstack/gommon/random
-# github.com/leodido/go-urn v1.2.0
+# github.com/leodido/go-urn v1.2.1
 github.com/leodido/go-urn
+# github.com/lib/pq v1.1.1
+github.com/lib/pq
+github.com/lib/pq/hstore
+github.com/lib/pq/oid
+github.com/lib/pq/scram
 # github.com/mattn/go-colorable v0.1.7
 github.com/mattn/go-colorable
 # github.com/mattn/go-isatty v0.0.12
 github.com/mattn/go-isatty
+# github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b
+github.com/satori/go.uuid
 # github.com/valyala/bytebufferpool v1.0.0
 github.com/valyala/bytebufferpool
 # github.com/valyala/fasttemplate v1.2.1
 github.com/valyala/fasttemplate
-# golang.org/x/crypto v0.0.0-20200820211705-5c72a883971a
+# golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad
 golang.org/x/crypto/acme
 golang.org/x/crypto/acme/autocert
+golang.org/x/crypto/bcrypt
+golang.org/x/crypto/blowfish
 golang.org/x/crypto/sha3
 # golang.org/x/net v0.0.0-20200822124328-c89045814202
 golang.org/x/net/http/httpguts
